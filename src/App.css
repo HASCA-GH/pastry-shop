@@ -1,38 +1,157 @@
 .App {
+text-align: center;
+}
+
+.nav {
+  height: 85px;
+  display: flex;
+  background-color: blueviolet;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logos {
+  height: 85px;
+  pointer-events: none;
+background-color: aqua;
+}
+
+.menuarea {
+  background-color: chartreuse;
+  width: 25%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 85px;
+}
+.menuarea input {
+  flex-grow: 1;
+  height: 50px;
+  font-size: medium;
+}
+
+.seccionmain {
+  width: 90%;
+  margin: 50px auto;
+  background-color: yellow;
+}
+
+.seccionmain h2 {
+  margin-bottom: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+  border-radius: 10px;
+}
+
+div.card {
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px;
+  /* box-shadow: 0 8px 16px 0 rgb(245, 244, 244);
+  box-shadow: 0 0 40px -10px rgba(172, 73, 73, 0.684); */
+  -webkit-box-shadow: 12px 12px 10px 12px #fafafa, 5px 5px 25px 8px #414141;
+  box-shadow: 1px 1px 15px 1px #fafafa, 5px 5px 25px 8px #414141;
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(227, 227, 227, 0.2);
+  transition: 0.3s;
+  padding: 2px;
+  margin: 1px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(255, 254, 254, 0.2);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+
+}
+
+.card-header {
+  text-align: center;
+  padding: 5px 5px;
+  /* background: linear-gradient(to right, #ff416c, #3b4bfa); */
+  background-color: white;
+  color: rgb(14, 14, 104);
+}
+
+.card-body {
+  padding: 15px 15px;
+  background-color: white;
+  color: black;
+  text-align: justify;
+  font-size: 0.9vw;
+}
+
+.card-body p {
+  background-color: white;
+  color: black;
+}
+
+.card-body .btn {
+  display: block;
+  background-color: darkgreen;
   color: white;
+text-align: center;
+  margin-top: 30px;
+  padding: 10px 5px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.seccionmain {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 620px) {
+  .heading {
+    background-color: #ff416c;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    width: 80%;
   }
+
+  .card-header img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 621px) {
+  .heading {
+    background-color: yellow;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .card-header img {
+    width: 80%;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .heading {
+    background-color: cadetblue;
+  }
+
+div.card {
+  margin-right: 0.1px;
+  margin-left: 0.1px;
+}
+.card {
+  width: 20%;
+}
+.card-header img {
+  width: 75%;
+}
+
 }
