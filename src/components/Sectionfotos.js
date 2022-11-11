@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
-import {midata} from '../data.js'
+// import {midata} from '../data.js'
 
-const Section_fotos = () => {
+const Section_fotos = ({midata}) => {
   
-  useEffect(() => {
-    // console.log(midata[1])
-      // return () => {
-      // }
-  }, [])
+  // useEffect(() => {
+  //   // console.log(midata[1])
+  //     // return () => {
+  //     // }
+  // }, [])
   
   return (
     <div className="seccionmain">
