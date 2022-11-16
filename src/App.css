@@ -1,9 +1,13 @@
+ul {
+  display: block;
+  text-align: left;
+}
 .App {
 text-align: center;
 }
 
 .nav {
-  height: 85px;
+  /* height: 85px; */
   display: flex;
   background-color: blueviolet;
   width: 100%;
@@ -13,37 +17,66 @@ text-align: center;
 .logos {
   height: 85px;
   pointer-events: none;
-background-color: aqua;
+  background-color: aqua;
+}
+div#titulo-tienda {
+  display: flex;
+  width: 30%;
+  /* flex: 12%; */
+  /* background-color: rgb(64, 255, 0); */
 }
 
-.menuarea {
+#titulo-tienda p {
+  display: block;
+  text-align: center;
+  margin: 25px auto;
+}
+
+div.menuarea {
   background-color: chartreuse;
-  width: 25%;
+width: 43%;
   display: flex;
   justify-content: left;
   align-items: center;
   height: 85px;
+padding-left: 10px;
 }
-.menuarea input {
-  flex-grow: 1;
-  height: 50px;
-  font-size: medium;
+.menuarea-search {
+  background-color: #989598;
+  /* display: flex; */
+  display: inline;
+  border-radius: 10px;
+  padding: 6px;
 }
 
+.menuarea-search #fcsearch {
+  height: 17px;
+  width: 17px;
+  outline: none;
+  border: none;
+  background-color: #989598;
+}
+
+.menuarea-search input {
+  height: 20px;
+  width: 27vw;
+  font-size: medium;
+  outline: none;
+  border: none;
+  background-color: #989598;
+}
 .seccionmain {
-  width: 90%;
-  margin: 50px auto;
+width: 100%;
+  margin: 5px auto;
   background-color: yellow;
 }
-
-.seccionmain h2 {
-  margin-bottom: 50px;
-  text-align: center;
+.heading {
+  margin-bottom: 15px;
 }
 
 .row {
   display: flex;
-flex-direction: row;
+  flex-direction: row;
   justify-content: space-around;
   flex-flow: wrap;
   border-radius: 10px;
@@ -80,8 +113,22 @@ div.card {
   /* background: linear-gradient(to right, #ff416c, #3b4bfa); */
   background-color: white;
   color: rgb(14, 14, 104);
+  border-radius: 10px;
 }
 
+.card-header h3 {
+  border-radius: 10px;
+}
+
+.card-header img {
+  /* width: 75%; */
+  border-radius: 10px;
+  height: 40vw;
+  /* padding-top: 00px; */
+  /* padding-bottom: -20px; */
+  margin-top: 10px;
+  margin-bottom: -20px;
+}
 .card-body {
   padding: 15px 15px;
   background-color: white;
@@ -95,20 +142,30 @@ div.card {
   color: black;
 }
 
+div.card-body #precio {
+  margin-top: -10px;
+  margin-bottom: -20px;
+  padding: 5px;
+  font-size: small;
+  font-weight: 600;
+  border-radius: 10px;
+}
 .card-body .btn {
   display: block;
   background-color: darkgreen;
   color: white;
-text-align: center;
+  text-align: center;
   margin-top: 30px;
   padding: 10px 5px;
   text-decoration: none;
+  border-radius: 10px;
 }
 
-.seccionmain {
+/* .seccionmain {
   width: 100%;
 }
 
+*/
 @media screen and (max-width: 620px) {
   .heading {
     background-color: #ff416c;
@@ -124,18 +181,35 @@ text-align: center;
 }
 
 @media screen and (min-width: 621px) {
-  .heading {
-    background-color: yellow;
+div.menuarea {
+    width: 33%;
+    /* justify-content: left; */
+    /* align-items: center; */
+    padding-left: 10px;
   }
 
-  .card {
-    width: 45%;
+  .menuarea-search {
+    width: 60vw;
+    margin-left: -10px;
   }
 
-  .card-header img {
-    width: 80%;
-    border-radius: 10px;
-  }
+  /* .menuarea-search #fcsearch {
+    margin: 0;
+  } */
+.heading {
+  background-color: yellow;
+}
+
+.card {
+  width: 45%;
+}
+
+.card-header img {
+  width: 80%;
+  border-radius: 10px;
+  height: 25vw;
+}
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -151,7 +225,11 @@ div.card {
   width: 20%;
 }
 .card-header img {
-  width: 75%;
-}
-
+  /* width: 75%; */
+    height: 11vw;
+    /* padding-top: 00px; */
+    /* padding-bottom: -20px; */
+    margin-top: 10px;
+    margin-bottom: -20px;
+  }
 }
